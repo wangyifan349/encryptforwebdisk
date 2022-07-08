@@ -4,14 +4,11 @@ import re,os,sys,time
 global wrong,time
 wrong=0
 wronglist=[]
-#os.chdir(r"./测试区域")
-print("加密可能导致你的文件无法恢复的破坏,请反复测试程序!")
-s=input("输入python3能理解的文件路径，例如:C:\\\文件夹\\子文件夹")
-s="C:\\\LSR"
+print("加密可能导致你的文件无法恢复的破坏,请反复测试程序再运行哦!")
+s=str(input("输入python3能理解的文件路径，例如:C:\\\文件夹\\子文件夹"))
 os.chdir(s)
 def encryptdata(filename):
     global wrong
-    #enfilename=filename+"已加密"#可以保留以前的文件,防止加密造成破坏
     enfilename=filename
     if os.path.exists(filename)==True:
         with open(filename,"rb")as f:
